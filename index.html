@@ -9,17 +9,36 @@
 		<h1>Triangle Tracker</h1>
 		<p>Input three numbers for the sides of a triangle to determine if it is an equilateral, isoceles, or scalene triangle.</p>
 		<form>
-			<label for="A">Enter a number:</label>
+			<label for="A">Side A:</label>
 			<input id="A" type="number" name="A">
-			<label for="B">Enter another number:</label>
+			<label for="B">Side B:</label>
 			<input id="B" type="number" name="B">
-			<label for="C">Enter one more number:</label>
+			<label for="C">Side C:</label>
 			<input id="C" type="number" name="C">
 
 			<button type="submit">Go</button>
 		</form>
 
 		<h2>Results</h2>
-		<p id="output"></p>
+
+		<div id="equilateral" class="hidden">
+			<h3>Equilateral</h3>
+			<p>All 3 sides of the triangle are equal.</p>
+		</div>
+
+		<div id="isosceles" class="hidden">
+			<h3>Isosceles</h3>
+			<p>2 sides of the triangle are equal.</p>
+		</div>
+
+		<div id="isosceles" class="hidden">
+			<h3>Scalene</h3>
+			<p>No sides of the triangle are equal.</p>
+		</div>
+
+		<div id="none" class="hidden">
+			<h3>Not a triangle</h3>
+			<p>The sum of the lengths of any two sides of the triangle is less than or equal to the length of the third side.</p>
+		</div>
 	</body>
 </html>
