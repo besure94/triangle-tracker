@@ -17,9 +17,9 @@ window.addEventListener("load", function() {
 		event.preventDefault();
 
 		if (A && B && C) {
-			if (A === B && B === C) {
+			if (A === B && B === A && B === C) {
 				document.getElementById("equilateral").removeAttribute("class");
-			} else if (A === B && C !== B) {
+			} else if (A === B && B === A && C !== B) {
 					document.getElementById("isosceles").removeAttribute("class");
 			} else if (A !== B || C !== B) {
 					document.getElementById("scalene").removeAttribute("class");
