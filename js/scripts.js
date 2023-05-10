@@ -1,3 +1,7 @@
+function isNotTriangle(A, B, C) {
+	return (A + B <= C);
+}
+
 window.addEventListener("load", function() {
 	let form = document.querySelector("form");
 	let resetBtn = document.getElementById("reset");
@@ -23,9 +27,14 @@ window.addEventListener("load", function() {
 			} else if (A === B && B === A && C !== B) {
 					document.getElementById("isosceles").removeAttribute("class");
 			} else if (A !== B || C !== B) {
+				if (isNotTriangle) {
+					document.getElementById("none").removeAttribute("class");
+				}
+				else {
 					document.getElementById("scalene").removeAttribute("class");
-			} else {
-
+				}
+			} else if (isNotTriangle) {
+					document.getElementById("none").removeAttribute("class");
 			}
 		}
 	});
